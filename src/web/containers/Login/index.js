@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { LoginComponent } from "../../components";
+import { withAuth } from "../../../shared/containers";
 
 class Login extends Component {
   state = {

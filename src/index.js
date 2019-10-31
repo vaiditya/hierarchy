@@ -5,9 +5,10 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
 import reducers from "./shared/store/reducers";
-import { createStore } from "redux";
+import { configStore } from "./shared/store";
+import axios from "axios";
 
-const store = createStore(reducers);
+const store = configStore(axios, {}, reducers);
 
 ReactDOM.render(
   <Provider store={store}>
